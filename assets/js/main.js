@@ -23,6 +23,12 @@ var goTo = function (where) {
 	pos = where;
 	setCookie("pos", where);
 	pages.selected = where;
+
+  if (where === 0) {
+    $("#info-btn").fadeIn("fast");
+  } else {
+    $("#info-btn").fadeOut("fast");
+  }
 };
 
 var init = function () {
@@ -33,7 +39,7 @@ var init = function () {
   }
 
   if (pos !== null && pos !== undefined) {
-    pages.selected = pos;
+    goTo(pos);
   } else {
     goTo(0);
   }

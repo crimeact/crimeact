@@ -33,3 +33,9 @@ p {
 paper-button {
 	background-color: #673AB7;
 }
+
+#info-btn {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
