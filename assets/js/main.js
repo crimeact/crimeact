@@ -18,7 +18,6 @@ var setCookie = function (cookieName, cookieValue) {
 };
 
 var goTo = function (where) {
-	console.log("running goTo with "+where);
 	where = parseInt(where);
 	pos = where;
 	setCookie("pos", where);
@@ -38,8 +37,12 @@ var init = function () {
   	pos = parseInt(pos);
   }
 
-  if (pos !== null && pos !== undefined) {
+  console.log(pos);
+
+  if (pos !== null && pos !== undefined && pos !== 1) {
     goTo(pos);
+  } else if (pos === 1) {
+    goTo(0);
   } else {
     goTo(0);
   }
