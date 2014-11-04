@@ -6,8 +6,10 @@
 	
 	<link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
 	<link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
+	<link rel="import" href="bower_components/core-icons/core-icons.html">
 	<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
 	<link rel="import" href="bower_components/paper-button/paper-button.html">
+	<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
 
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/mobile.css">
@@ -24,7 +26,13 @@
 		<!--Each section element represents a event-->
 		<section>
     		<h1 class="hero-headline">Crime Act</h1>
-    		<paper-button raised class="go-btn colored" onclick="goTo(1)">Go</paper-button>
+    		<paper-button raised class="go-btn colored" onclick="goTo(2)">Go</paper-button>
+		</section>
+
+		<section>
+			<h1>About</h1>
+			<p>This is a school project for the "Bundeswettbewerb Fremdsprachen". It's a you-decide-story. That means you take the role of the main character and make important decisions for him. These decisions are key to the success of your Investigations. <br> Have fun playing! <br> The Pink Fluffy Unicorn Team</p>
+			<paper-button raised onclick="goTo(0)">Back</paper-button>
 		</section>
 
 		<section>
@@ -32,6 +40,8 @@
 			<paper-button raised onclick="goTo(0)">Back</paper-button>
 		</section>
 	</core-animated-pages>
+
+	<div id="info-btn"><paper-icon-button icon="info-outline" onclick="goTo(1)"></paper-icon-button></div>
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="assets/js/main.js"></script>
