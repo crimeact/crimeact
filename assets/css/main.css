@@ -1,0 +1,35 @@
+body {
+	font-family: "Helvetica Neue";
+	background: -webkit-linear-gradient(90deg, #232526 10%, #414345 90%);
+	background:    -moz-linear-gradient(90deg, #232526 10%, #414345 90%);
+	background:     -ms-linear-gradient(90deg, #232526 10%, #414345 90%);
+	background:      -o-linear-gradient(90deg, #232526 10%, #414345 90%);
+	background:         linear-gradient(90deg, #232526 10%, #414345 90%);
+	color: rgba(255, 255, 255, 0.87);
+}
+
+section {
+	text-align: center;
+	padding: 10px 0 0 0;
+}
+
+h1 {
+	font-size: 3em;
+	display: block;
+}
+
+p {
+	font-size: 1.2em;
+}
+.hero-headline {
+	font-size: 10em;
+	color: #white;
+}
+
+.go-btn {
+	background-color: #673AB7;
+}
+
+paper-button {
+	background-color: #673AB7;
+}

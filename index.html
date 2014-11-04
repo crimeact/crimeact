@@ -1,0 +1,39 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+	<title>Our super awesome game</title>
+	<script type="text/javascript" src="bower_components/platform/platform.js"></script>
+	
+	<link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
+	<link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
+	<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+	<link rel="import" href="bower_components/paper-button/paper-button.html">
+
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/mobile.css">
+
+</head>
+<body unresolved fullbleed>
+
+<!-- 	<core-toolbar>
+		<paper-button>Hello</paper-button>
+	</core-toolbar> -->
+	
+	<!--Content-->
+	<core-animated-pages  selected="0" transitions="slide-from-right">
+		<!--Each section element represents a event-->
+		<section>
+    		<h1 class="hero-headline">Crime Act</h1>
+    		<paper-button raised class="go-btn colored" onclick="goTo(1)">Go</paper-button>
+		</section>
+
+		<section>
+			<h1>Test</h1>
+			<paper-button raised onclick="goTo(0)">Back</paper-button>
+		</section>
+	</core-animated-pages>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>

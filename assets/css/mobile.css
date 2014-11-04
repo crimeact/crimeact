@@ -1,0 +1,9 @@
+@media (max-width: 600px) {
+	.go-btn {
+		font-size: 32px;
+	}
+
+	.hero-headline {
+		font-size: 7.5em;
+	}
+}
