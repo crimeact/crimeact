@@ -6,7 +6,7 @@
 	.hero-headline {
 		font-size: 7.5em;
 	}
-	section {
+	section > div {
 		width: 89%;
 	}
 	p {

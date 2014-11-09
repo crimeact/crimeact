@@ -1,5 +1,8 @@
 var pages = $("core-animated-pages")[0];
 var pos;
+var music_setting;
+var main_theme = $("#main_theme")[0];
+var music_icon = $("#music_icon")[0];
 
 var getCookie = function (key) {
   var result;
@@ -30,6 +33,33 @@ var goTo = function (where) {
   }
 };
 
+var load_music_setting = function () {
+  music_setting = getCookie("music_setting");
+  if (music_setting === "true") {
+    music_setting = true;
+  } else if (music_setting === "false") {
+    music_setting = false;
+  } else {
+    setCookie("music_setting", true);
+    music_setting = true;
+  }
+};
+
+var toggleMusic = function () {
+  console.log("running too");
+  if (music_setting === true) {
+    setCookie("music_setting", false);
+    load_music_setting();
+    main_theme.pause();
+    music_icon.icon = "av:volume-off";
+  } else {
+    setCookie("music_setting", true);
+    load_music_setting();
+    main_theme.play();
+    music_icon.icon = "av:volume-up";
+  }
+};
+
 var init = function () {
   
   pos = getCookie("pos");
@@ -37,7 +67,7 @@ var init = function () {
   	pos = parseInt(pos);
   }
 
-  console.log(pos);
+  console.log("postion: "+pos);
 
   if (pos !== null && pos !== undefined && pos !== 1) {
     goTo(pos);
@@ -45,6 +75,11 @@ var init = function () {
     goTo(0);
   } else {
     goTo(0);
+  }
+  load_music_setting();
+  if (music_setting === false) {
+    main_theme.pause();
+    music_icon.icon = "av:volume-off";
   }
 };
 
