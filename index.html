@@ -1,8 +1,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
-	<title>Our super awesome game</title>
+	<title>Crimeact</title>
 	<script type="text/javascript" src="bower_components/platform/platform.js"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
 	
 	<link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
 	<link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
@@ -21,6 +23,8 @@
 		<paper-button>Hello</paper-button>
 	</core-toolbar> -->
 	
+	<audio src="assets/music/Benjamin_Lambert_-_creepy.mp3" autoplay loop="true" preload></audio>
+
 	<!--Content-->
 	<core-animated-pages  selected="0" transitions="slide-from-right">
 		<!--Each section element represents a event-->
@@ -32,6 +36,7 @@
 		<section>
 			<h1>About</h1>
 			<p>This is a school project for the "Bundeswettbewerb Fremdsprachen". It's a you-decide-story. That means you take the role of the main character and make important decisions for him. These decisions are key to the success of your Investigations. <br> Have fun playing! <br> The Pink Fluffy Unicorn Team</p>
+			<h4>Music by Benjamin Lambert</h4>
 			<paper-button raised onclick="goTo(0)">Back</paper-button>
 		</section>
 

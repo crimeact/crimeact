@@ -6,4 +6,10 @@
 	.hero-headline {
 		font-size: 7.5em;
 	}
+	section {
+		width: 89%;
+	}
+	p {
+		font-size: 1.3em;
+	}
 }
