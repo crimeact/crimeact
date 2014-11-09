@@ -5,10 +5,11 @@
 	<script type="text/javascript" src="bower_components/platform/platform.js"></script>
 
 	<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
-	
+
 	<link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
 	<link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
 	<link rel="import" href="bower_components/core-icons/core-icons.html">
+	<link rel="import" href="bower_components/core-icons/av-icons.html">
 	<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
 	<link rel="import" href="bower_components/paper-button/paper-button.html">
 	<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
@@ -23,32 +24,39 @@
 		<paper-button>Hello</paper-button>
 	</core-toolbar> -->
 	
-	<audio src="assets/music/Benjamin_Lambert_-_creepy.mp3" autoplay loop="true" preload></audio>
+	<audio id="main_theme" src="assets/music/Benjamin_Lambert_-_creepy.mp3" autoplay loop="true" preload></audio>
 
 	<!--Content-->
 	<core-animated-pages  selected="0" transitions="slide-from-right">
 		<!--Each section element represents a event-->
 		<section>
-    		<h1 class="hero-headline">Crime Act</h1>
-    		<paper-button raised class="go-btn colored" onclick="goTo(2)">Go</paper-button>
+			<div>
+    			<h1 class="hero-headline">Crime Act</h1>
+    			<paper-button raised class="go-btn colored" onclick="goTo(2)">Go</paper-button>
+    		</div>
 		</section>
 
 		<section>
-			<h1>About</h1>
-			<p>This is a school project for the "Bundeswettbewerb Fremdsprachen". It's a you-decide-story. That means you take the role of the main character and make important decisions for him. These decisions are key to the success of your Investigations. <br> Have fun playing! <br> The Pink Fluffy Unicorn Team</p>
-			<h4>Music by Benjamin Lambert</h4>
-			<paper-button raised onclick="goTo(0)">Back</paper-button>
+			<div>
+				<h1>About</h1>
+				<p>This is a school project for the "Bundeswettbewerb Fremdsprachen". It's a you-decide-story. That means you take the role of the main character and make important decisions for him. These decisions are key to the success of your Investigations. <br> Have fun playing! <br> The Pink Fluffy Unicorn Team</p>
+				<h4>Music by Benjamin Lambert</h4>
+				<paper-button raised onclick="goTo(0)">Back</paper-button>
+			</div>
 		</section>
 
 		<section>
-			<h1>Your Arrival</h1>
-			<p>Monday, 6th of November, 1784. It was a rainy day. Mr. Jackson's driver waited in front of the railway station...</p>
-			<paper-button raised onclick="goTo(0)">Option One</paper-button>
-			<paper-button raised onclick="goTo(0)">Option 2</paper-button>
+			<div>
+				<h1>Your Arrival</h1>
+				<p>Monday, 6th of November, 1784. It was a rainy day. Mr. Jackson's driver waited in front of the railway station...</p>
+				<paper-button raised onclick="goTo(0)">Option One</paper-button>
+				<paper-button raised onclick="goTo(0)">Option 2</paper-button>
+			</div>
 		</section>
 	</core-animated-pages>
 
 	<div id="info-btn"><paper-icon-button icon="info-outline" onclick="goTo(1)"></paper-icon-button></div>
+	<div id="music-btn"><paper-icon-button icon="av:volume-up" onclick="toggleMusic()" id="music_icon"></paper-icon-button></div>
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="assets/js/main.js"></script>
