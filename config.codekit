@@ -9207,7 +9207,7 @@
 			"flagValue": -1
 			},
 		"loopfunc": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"maxcomplexity": {

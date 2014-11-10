@@ -31,7 +31,7 @@ p {
 }
 
 paper-button {
-	background-color: #D50000;
+	background-color: #7B1FA2;
 	margin-bottom: 30px;
 }
 
@@ -41,7 +41,7 @@ paper-icon-button {
 
 #info-btn {
 	position: fixed;
-	bottom: 0px;
+	top: 0px;
 	left: 0px;
 }
 
@@ -49,6 +49,12 @@ paper-icon-button {
 	position: fixed;
 	bottom: 0px;
 	right: 0px;
+}
+
+#home-btn {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
 }
 
 section > div > p {
