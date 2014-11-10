@@ -3,6 +3,7 @@ var pos;
 var music_setting;
 var main_theme = $("#main_theme")[0];
 var music_icon = $("#music_icon")[0];
+var section = $("section")[0];
 
 var getCookie = function (key) {
   var result;
@@ -20,6 +21,34 @@ var setCookie = function (cookieName, cookieValue) {
   document.cookie = cookieName + "=" + cookieValue + ";expires=" + expire.toGMTString();
 };
 
+var round_two_decimals = function (what) {
+  return (Math.round(what*100))/100;
+};
+
+var fade_volume = function () {
+
+  if (round_two_decimals(section.getAttribute("volume")) > main_theme.volume) {
+
+    setTimeout(function () {
+      main_theme.volume = round_two_decimals(round_two_decimals(main_theme.volume) + 0.01);
+      console.log(main_theme.volume);
+      fade_volume();
+    }, 20);
+
+  } else if (round_two_decimals(section.getAttribute("volume")) < main_theme.volume) {
+
+    setTimeout(function () {
+      main_theme.volume = round_two_decimals(round_two_decimals(main_theme.volume) - 0.01);
+      console.log(main_theme.volume);
+      fade_volume();
+    }, 20);
+
+  } else {
+    console.log("to be = is");
+  }
+
+};
+
 var goTo = function (where) {
 	where = parseInt(where);
 	pos = where;
@@ -30,6 +59,14 @@ var goTo = function (where) {
     $("#info-btn").fadeIn("fast");
   } else {
     $("#info-btn").fadeOut("fast");
+  }
+
+  section = $("section")[where];
+  console.log(section);
+  if (section.getAttribute("volume") !== null) {
+    fade_volume();
+  } else {
+    main_theme.volume = 1;
   }
 };
 
@@ -81,6 +118,13 @@ var init = function () {
     main_theme.pause();
     music_icon.icon = "av:volume-off";
   }
+
+  for (var i = 0; i < $("section").length; i++) {
+    if ($("section")[i].getAttribute("volume") === null) {
+      $("section")[i].setAttribute("volume", 1);
+    }
+  }
+
 };
 
 document.addEventListener('polymer-ready', function() {
