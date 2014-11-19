@@ -19,16 +19,12 @@
 
 </head>
 <body unresolved fullbleed>
-
-<!-- 	<core-toolbar>
-		<paper-button>Hello</paper-button>
-	</core-toolbar> -->
 	
 	<audio id="main_theme" src="assets/music/Benjamin_Lambert_-_creepy.mp3" autoplay loop="true" preload></audio>
 
 	<!--Content-->
 	<core-animated-pages  selected="0" transitions="slide-from-right">
-		<!--Each section element represents a event-->
+		<!--Each section element represents a event/text-->
 		<section>
 			<div>
     			<h1 class="hero-headline">Crime Act</h1>
@@ -49,7 +45,9 @@
 		<section>
 			<div>
 				<h1>Your Arrival</h1>
-				<p>Monday, 6th of November, 1784. It was a rainy day. Mr. Jackson's driver waited in front of the railway station...</p>
+				<p>Monday, 6th of November, 1784. It's a rainy day. Mr. Jackson driver waited in front of the railway station. Mr Jackson's comes out of the railway station and the driver gets out of his car, opens the door and takes the suitcase into the trunk. He gets back into his car and said: "Hello, my name is Mr. Instance. Do you had a pleasant trip?" You tell him you had and where you want to go now. He is surprised after you told him but he drove off the station.
+					
+					You arrive at the shire. It`s very cold and foggy outside and you hurry towards the majestic door. It`s rusty and difficult to open but you lean against it and at least it opens. The frontyard is huge and you need a few hundred steps to reach the big wooden door of the estate which is, to your surprise, open. You step in. There`s no light in the entrance hall and your eyes first have to get accustomed to the dark, but this doesn`t take a lot of time. Ther`s another open door..</p>
 				<paper-button raised onclick="goTo(3)">Go to the bedroom</paper-button>
 				<paper-button raised onclick="goTo(4)">Talk to the earl</paper-button>
 			</div>
@@ -57,14 +55,15 @@
 		<section>
 			<div>
 				<h1>In the bedroom</h1>
-				<p>Monday, 6th of November, 1784. It was a rainy day. Mr. Jackson's driver waited in front of the railway station...</p>
+				<p>You go through it and come in a bedroom. It`s neat and tidy but with you experienced eyes you notice a muddy footprint beneath the bed.</p>
 				<paper-button raised onclick="goTo(7)">Talk to the earl about the foot print</paper-button>
 			</div>
 		</section>
 		<section>
 			<div>
 				<h1>Talk to the earl</h1>
-				<p>Monday, 6th of November, 1784. It was a rainy day. Mr. Jackson's driver waited in front of the railway station...</p>
+				<p>It takes you very long to find your client, but at last you find him standing there alone in the drawing room. 
+				"Lordship MacMillan. "I am very delighted to might be able to help you."  </p>
 				<paper-button raised onclick="goTo(5)">Go to the bedroom</paper-button>
 				<paper-button raised onclick="goTo(6)">Go to the dining room</paper-button>
 			</div>
@@ -73,7 +72,7 @@
 		<section>
 			<div>
 				<h1>The bedroom</h1>
-				<p>Monday, 6th of November, 1784. It was a rainy day. Mr. Jackson's driver waited in front of the railway station...</p>
+				<p></p>
 				<paper-button raised onclick="goTo(0)">Restart</paper-button>
 			</div>
 		</section>
@@ -85,7 +84,7 @@
 				<paper-button raised onclick="goTo(9)">Look at the rope</paper-button>
 			</div>
 		</section>
-		<section>
+		<section volume="0.5">
 			<div>
 				<h1>Talk to the earl about the earl about the foot prints</h1>
 				<p>Monday, 6th of November, 1784. It was a rainy day. Mr. Jackson's driver waited in front of the railway station...</p>
@@ -96,7 +95,7 @@
 		<section>
 			<div>
 				<h1>Look at the Chandelier</h1>
-				<p>Monday, 6th of November, 1784. It was a rainy day. Mr. Jackson's driver waited in front of the railway station...</p>
+				<p>Monday, the 6th of November, 1784. It was a rainy day. Mr. Jackson's driver waited in front of the railway station...</p>
 				<paper-button raised onclick="goTo(11)">Follow him</paper-button>
 				<paper-button raised onclick="goTo(12)">Visit the earl in the bedroom</paper-button>
 			</div>
