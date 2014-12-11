@@ -1,0 +1,60 @@
+head
+  title Crimeact
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+  scirpt(src="bower_components/platform/platform.js")
+
+  link(href="http://fonts.googleapis.com/css?family=Vollkorn", rel="stylesheet", type="text/css")
+  
+  link(rel='import', href='bower_components/core-animated-pages/transitions/slide-from-right.html')
+  link(rel='import', href='bower_components/core-animated-pages/core-animated-pages.html')
+  link(rel='import', href='bower_components/core-icons/core-icons.html')
+  link(rel='import', href='bower_components/core-icons/av-icons.html')
+  link(rel='import', href='bower_components/core-toolbar/core-toolbar.html')
+  link(rel='import', href='bower_components/paper-button/paper-button.html')
+  link(rel='import', href='bower_components/paper-icon-button/paper-icon-button.html')
+
+  link(rel='stylesheet', href='assets/css/main.css')
+  link(rel='stylesheet', href='assets/css/mobile.css')
+
+body(unresolved, fullbleed)
+
+  audio#main_theme(src='assets/music/Benjamin_Lambert_-_creepy.mp3', autoplay, loop='true', preload)
+
+  core-animated-pages(selected="0", transitions="slide-from-right")
+    include assets/html/0.html
+    include assets/html/1.html
+    include assets/html/2.html
+    include assets/html/3.html
+    include assets/html/4.html
+    include assets/html/5.html
+
+    include assets/html/6.html
+    include assets/html/7.html
+    include assets/html/8.html
+    include assets/html/9.html
+    include assets/html/10.html
+
+    include assets/html/11.html
+    include assets/html/12.html
+    include assets/html/13.html
+    include assets/html/14.html
+    include assets/html/15.html
+
+    include assets/html/16.html
+    include assets/html/17.html
+    include assets/html/18.html
+    include assets/html/19.html
+    include assets/html/20.html
+
+    include assets/html/21.html
+
+  div#info-btn
+    paper-icon-button(icon="info-outline", onclick="goTo(1)")
+  div#music-btn
+    paper-icon-button(icon="av:volume-up", onclick="toggleMusic()", id="music_icon")
+  div#home-btn
+    paper-icon-button(icon="home", onclick="goTo(0)")
+
+  script(src="bower_components/jquery/dist/jquery.min.js")
+  script(src="assets/js/min/main-min.js")
