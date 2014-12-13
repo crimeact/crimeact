@@ -27,7 +27,6 @@ p {
 
 .hero-headline {
 	font-size: 10em;
-	color: #white;
 }
 
 paper-button {
@@ -64,6 +63,10 @@ section > div > p {
 section > div > h1 {
 	font-family: "Vollkorn";
 }
+
+/* ###### */
+/* LETTER */
+/* ###### */
 
 .letter {
 	font-family: "Norican";
@@ -106,4 +109,74 @@ section > div > h1 {
 	-ms-transform: skew(5deg) rotate(5deg);
 	-o-transform: skew(5deg) rotate(5deg);
 	transform: skew(5deg) rotate(5deg);
+}
+
+/* ############## */
+/* SPEEECHBUBBLES */
+/* ############## */
+
+
+.chat {
+	widht: 75%;
+}
+
+.clear {
+	clear: both;
+}
+
+.me {
+	-webkit-animation: popup-me 1s ease;
+	color: white;
+	background-color: #1982FB;
+	display: block;
+	padding: 10px 20px;
+	border-radius: 25px;
+	margin: 5px 0px;
+	float: right;
+}
+.me:after {
+	content: "\a";
+    white-space: pre;
+}
+
+.them {
+	-webkit-animation: popup-them 1.5s ease;
+	color: black;
+	background-color: #E5E5EA;
+	display: block;
+	padding: 10px 20px;
+	border-radius: 25px;
+	margin: 5px 0px;
+	float: left;
+}
+.them:after {
+	content: "\a";
+	white-space: pre;
+}
+
+@-webkit-keyframes popup-me {
+	0% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes popup-them {
+	0% {
+		transform: scale(0);
+	}
+	33% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1)
+	}
 }
