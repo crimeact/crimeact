@@ -76,7 +76,7 @@ section > div > h1 {
 	position: relative;
 	width: 65%;
 	padding: 4%;
-	margin: 0 auto;
+	margin: 10px auto;
 	background-color: #F8ECC2;
 	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
@@ -135,6 +135,7 @@ section > div > h1 {
 	border-radius: 25px;
 	margin: 5px 0px;
 	float: right;
+	max-width: 50%;
 }
 .me:after {
 	content: "\a";
@@ -150,6 +151,7 @@ section > div > h1 {
 	border-radius: 25px;
 	margin: 5px 0px;
 	float: left;
+	max-width: 50%;
 }
 .them:after {
 	content: "\a";
