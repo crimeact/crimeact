@@ -72,6 +72,7 @@ section > div > h1 {
 	font-family: "Norican";
 	color: black;
 	font-size: 1.4em;
+	font-style: italic;
 	position: relative;
 	width: 65%;
 	padding: 4%;
@@ -118,6 +119,7 @@ section > div > h1 {
 
 .chat {
 	widht: 75%;
+	margin-bottom: 75px;
 }
 
 .clear {
