@@ -23,7 +23,7 @@
 	}
 }
 
-@media (max-height: 650px) {
+@media (max-height: 650px) and (max-widht: 750px) {
 	.hero-headline {
 		font-size: 5em;
 	}
