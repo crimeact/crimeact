@@ -25,6 +25,11 @@ p {
 	font-size: 1.2em;
 }
 
+img {
+	max-width: 100%;
+	margin-bottom: 30px;
+}
+
 .hero-headline {
 	font-size: 10em;
 }
