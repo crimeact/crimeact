@@ -1,9 +1,12 @@
-var pages = $("core-animated-pages")[0];
-var pos;
+var fails = 0;
 var music_setting;
 var main_theme = $("#main_theme")[0];
 var music_icon = $("#music_icon")[0];
+var pages = $("core-animated-pages")[0];
+var pos;
 var section = $("section")[0];
+var time;
+var timeSetter;
 
 var getCookie = function (key) {
   var result;
@@ -53,12 +56,32 @@ var goTo = function (where) {
 	where = parseInt(where);
 	pos = where;
 	setCookie("pos", where);
+  
+  if (pages.selected !== 1 && where === 0) {
+    fails++;
+    setCookie("fails", fails);
+    $(".fails").html(fails);
+  }
+
 	pages.selected = where;
+  console.log("New: " + pages.selected);
 
   if (where === 0) {
     $("#info-btn").fadeIn("fast");
+  } else if (where === 35) {
+    clearTimeout(timeSetter);
+    $(".time").html(Math.round(time/60));
+    $("#info-btn").fadeOut("fast");
   } else {
     $("#info-btn").fadeOut("fast");
+  }
+
+  if (where === 2) {
+    timeSetter = setInterval(function () {
+      time += 10;
+      setCookie("time", time);
+      $(".time").html(Math.round(time/60));
+    },10000);
   }
 
   section = $("section")[where];
@@ -97,23 +120,48 @@ var toggleMusic = function () {
   }
 };
 
+var goHome = function () {
+  goTo(0);
+  fails--;
+  setCookie("fails", fails);
+  $(".fails").html(fails);
+};
+
 var init = function () {
+
+  if (getCookie("fails") !== null) {
+    fails = parseInt(getCookie("fails"));
+  }
+
+  $(".fails").html(fails);
   
   pos = getCookie("pos");
   if (pos !== null && pos !== undefined) {
   	pos = parseInt(pos);
   }
 
-  console.log("postion: "+pos);
-
-  if (pos !== null && pos !== undefined && pos !== 1) {
-    goTo(pos);
-  } else if (pos === 1) {
-    goTo(0);
+  time = getCookie("time");
+  if (pos !== null && pos !== undefined) {
+    time = parseInt(time);
   } else {
-    goTo(0);
+    time = 0;
+    setCookie("time", 0);
   }
+
+  console.log("postion: " + pos);
+
+  if (pos !== null && pos !== undefined && pos !== 1 && pos !== 0) {
+    goTo(pos);
+  } else if (pos === 0) {
+    goHome();
+  } else if (pos === 1) {
+    goHome();
+  } else {
+    goHome(0);
+  }
+
   load_music_setting();
+
   if (music_setting === false) {
     main_theme.pause();
     music_icon.icon = "av:volume-off";
