@@ -21,6 +21,14 @@ h1 {
 	display: block;
 }
 
+li {
+	list-style: none;
+}
+
+ul {
+	margin-top: 0px;
+}
+
 p {
 	font-size: 1.2em;
 }
@@ -28,6 +36,8 @@ p {
 img {
 	max-width: 100%;
 	margin-bottom: 30px;
+	display: block;
+	margin: 20px auto;
 }
 
 .hero-headline {
@@ -61,12 +71,20 @@ paper-icon-button {
 	left: 0px;
 }
 
+.no_bottom_margin {
+	margin-bottom: 0px;
+}
+
 section > div > p {
 	font-family: "Vollkorn";
 }
 
 section > div > h1 {
 	font-family: "Vollkorn";
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 /* ###### */
