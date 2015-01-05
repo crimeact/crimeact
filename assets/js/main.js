@@ -61,6 +61,12 @@ var goTo = function (where) {
     fails++;
     setCookie("fails", fails);
     $(".fails").html(fails);
+    if (fails === 1) {
+      $('.fails_s').html('');
+      $(".fails").html('one');
+    } else {
+      $('.fails_s').html('s');
+    }
   }
 
 	pages.selected = where;
@@ -71,16 +77,35 @@ var goTo = function (where) {
   } else if (where === 35) {
     clearTimeout(timeSetter);
     $(".time").html(Math.round(time/60));
+    if (Math.round(time/60) === 1) {
+      $('.time_s').html('');
+    } else {
+      $('.time_s').html('s');
+    }
+    if (fails === 1) {
+      $('.fails_s').html('');
+      $(".fails").html('one');
+    } else {
+      $('.fails_s').html('s');
+    }
     $("#info-btn").fadeOut("fast");
   } else {
     $("#info-btn").fadeOut("fast");
   }
 
   if (where === 2) {
+    console.log("creating time Interval");
     timeSetter = setInterval(function () {
+      console.log("Adding time " + time);
       time += 10;
+      console.log("time is now " + time);
       setCookie("time", time);
       $(".time").html(Math.round(time/60));
+      if (Math.round(time/60) === 1) {
+      $('.time_s').html('');
+    } else {
+      $('.time_s').html('s');
+    }
     },10000);
   }
 
